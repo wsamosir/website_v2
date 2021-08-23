@@ -27,7 +27,7 @@ var PAGE_CONFIG = [
                 },
             ],
             tags        : [
-                'java', 'ear'
+                'artifact',  'ear', 'java',
             ],
         }
     },
@@ -54,7 +54,7 @@ var PAGE_CONFIG = [
                 }
             ],
             tags        : [
-                'java', 'ear'
+                'artifact',  'ear', 'java',
             ],
         }
     },
@@ -76,7 +76,7 @@ var PAGE_CONFIG = [
 
             ],
             tags        : [
-                'han', 'hand'
+                'artifact','hand', 'burial', 'han', 
             ]
         }
     },
@@ -86,7 +86,17 @@ var PAGE_CONFIG = [
         class   : [],
         config  : {
             title       : 'Historical Futurism',
-            description : "Historical futurism is a movement that declares an alternative futurism, from the point of view of Indonesian and South East Asian Culture"
+            description : "Historical futurism is a movement that declares an alternative futurism, from the point of view of Indonesian and South East Asian Culture",
+            links       : [
+                {
+                    name: 'Manifesto',
+                    link: './'
+                },
+    
+            ],
+            tags        : [
+                'writing'
+            ]
         },
     },
 
@@ -94,15 +104,8 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing, the understanding of being."
+            description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing, the understanding of being.",
         },
-        links       : [
-            {
-                name: 'Manifesto',
-                link: './'
-            },
-
-        ],
     },
 
     {
@@ -122,7 +125,7 @@ var PAGE_CONFIG = [
 
             ],
             tags        : [
-                'kutai', 'head'
+                'artifact',  'head', 'kutai',
             ]
         }
     },
@@ -168,6 +171,31 @@ var ALL_TAGS = [
         name    : 'Headwear',
         image   : './assets/tags/head.png',
     },
+
+    {
+        id      : 'artifact',
+        name    : 'Artifact & Objects',
+        image   : './assets/tags/artifact.png',
+    },
+
+    {
+        id      : 'writing',
+        name    : 'Text & Writing',
+        image   : './assets/tags/writing.png',
+    },
+
+    {
+        id      : 'random',
+        name    : 'Random',
+        image   : './assets/tags/random.png',
+    },
+
+    {
+        id      : 'burial',
+        name    : 'Burial Components',
+        image   : './assets/tags/burial.png',
+    },
+
 
 
 ]
