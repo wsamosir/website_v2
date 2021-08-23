@@ -7,19 +7,56 @@
         <meta name="description" content="">
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <link rel="stylesheet" href="dist/bundle.min.css">
+        <link rel="stylesheet" href="./dist/jquery.magnific-popup.css"></script>
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="./dist/masonry.pkgd.min.js"></script>
+        <script src="./dist/jquery.magnific-popup.min.js"></script>
         <script src="index.config.js"></script>
     </head>
     <body>
 
-        <div class="header">
-            <img src="assets/header.png">
-            <p></p>
+        <header class="header">
+            <div class="header-image">
+                <img src="assets/header.png">
+            </div>
+            <!-- <div class="header-description">
+                <p>welcome ! </p>
+            </div> -->
+        </header>
+<!-- 
+        <div    id="main-container"
+                class="grid"
+                data-masonry='{ 
+                    "columnWidth": ".component"
+                    "itemSelector": ".component",
+                }'>
+        </div> -->
+
+        <div    id="main-container"
+                class="grid">
         </div>
 
-        <div id="main-container"></div>
-
         <script src="./dist/bundle.js"></script>
+
+        <script>
+            var msnry = new Masonry( '.grid', {
+            });
+        </script>
+
+        <script>
+            $('.link-button').magnificPopup({
+                type: 'iframe',
+                mainClass: 'custom-mfp-iframe',
+                iframe: {
+                    markup: '<div class="mfp-iframe-scaler your-special-css-class">'+
+                                        '<div class="mfp-close"></div>'+
+                                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen>            </iframe>'+
+                                    '</div>'
+                }   
+
+            });
+        </script>
 
     </body>
 </html>

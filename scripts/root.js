@@ -1,7 +1,5 @@
 import { isDefined } from './helpers';
 
-console.log(PAGE_CONFIG)
-
 function createDisplay(config) {
     
     var div = document.createElement('div')
@@ -19,6 +17,9 @@ function createDisplay(config) {
 
     if (isDefined(config.image)) {
         var img = document.createElement('img')
+        img.onload = function() {
+            msnry.layout()
+        }
         img.src = config.image
         imageContainer.appendChild(img)
     }
@@ -50,14 +51,57 @@ function createDisplay(config) {
             if (isDefined(link.link)) linkDiv.href = link.link
             linkDiv.classList.add('link-button')
             linkDiv.innerHTML = link.name
+            
             // linkDiv.appendChild(linkButton)
             linkContainer.appendChild(linkDiv)
 
         });
 
+        div.appendChild(linkContainer)
+
     }
 
-    div.appendChild(linkContainer)
+
+    if (isDefined(config.tags)) {
+
+        var tagContainer = document.createElement('div')
+        tagContainer.classList.add('tag-container')
+
+        config.tags.forEach(tagId => {
+            
+            var tagObject = ALL_TAGS.filter(obj => {
+                return obj.id === tagId
+            })[0]
+              
+            var tagDiv = document.createElement('div')
+            tagDiv.style.backgroundImage = "url('" + tagObject.image + "')"
+
+            tagDiv.classList.add('tag')
+            tagContainer.appendChild(tagDiv)
+
+            // var tagDescription = document.createElement('div')
+            // tagDescription.classList.add('tag-description')
+            
+            // var span = document.createElement('h4')
+            // span.innerHTML = tagObject.name
+            
+            // var span2 = document.createElement('p')
+            // span2.innerHTML = tagObject.description
+            
+            // tagDescription.appendChild(span)
+            // tagDescription.appendChild(span2)
+            // tagDiv.appendChild(tagDescription)
+            
+            tagDiv.setAttribute('title', tagObject.name) 
+
+        });
+
+
+        div.appendChild(tagContainer)
+
+
+    }
+
 
     return div
 }
@@ -68,6 +112,7 @@ PAGE_CONFIG.forEach(object => {
 
     let type = object.type
     let config = object.config
+    let classNames = object.class
 
     switch (type) {
 
@@ -75,11 +120,18 @@ PAGE_CONFIG.forEach(object => {
             var div = createDisplay(config)
             break
 
-        
     }
+
+    classNames.forEach(className => {
+        div.classList.add(className)
+    });
 
     div.classList.add('component')
 
     mainContainer.appendChild(div)
 
 });
+
+
+
+
