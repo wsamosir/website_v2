@@ -1,5 +1,6 @@
 var PAGE_CONFIG = [
 
+
     {
         type    : 'standard',
         class   : [],
@@ -75,7 +76,7 @@ var PAGE_CONFIG = [
 
             ],
             tags        : [
-                'han'
+                'han', 'hand'
             ]
         }
     },
@@ -104,6 +105,29 @@ var PAGE_CONFIG = [
         ],
     },
 
+    {
+        type    : 'standard',
+        class   : [],
+        config  : {
+            // href        : './works',
+            image       : './assets/ketopong/preview.jpg',
+            title       : 'Ketopong Sultan',
+            description : 'Recreated in the name of the commons. Inspired by a helmet of the Kutai Kingdom that was once believed to be only wearable by those of blue blood, smithed out of 2 kilograms of pure gold',
+            links       : [
+                {
+                    name: 'Original Artifact',
+                    link: 'https://artsandculture.google.com/asset/ketopong-crown-unknown/xQFj1JO8SkH-qA'
+
+                },
+
+            ],
+            tags        : [
+                'kutai', 'head'
+            ]
+        }
+    },
+
+
 ]
 
 var ALL_TAGS = [
@@ -122,9 +146,28 @@ var ALL_TAGS = [
     },
 
     {
+        id      : 'kutai',
+        name    : 'Kutai Kingdom',
+        image   : './assets/tags/kutai.png',
+    },
+
+    {
         id      : 'ear',
         name    : 'Ear Apparels',
         image   : './assets/tags/ear.png',
     },
+
+    {
+        id      : 'hand',
+        name    : 'Hand Apparels',
+        image   : './assets/tags/hand.png',
+    },
+
+    {
+        id      : 'head',
+        name    : 'Headwear',
+        image   : './assets/tags/head.png',
+    },
+
 
 ]

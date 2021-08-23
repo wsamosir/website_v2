@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Gruppo&family=Rajdhani:wght@300&family=Uncial+Antiqua&display=swap");
+:root {
+  font-size: 15px;
+}
+
 body {
   background-color: black;
   color: white;
@@ -29,12 +33,14 @@ p {
 
 .component {
   float: left;
-  margin: 5px;
   width: fit-content;
   height: fit-content;
   padding: 10px;
   max-width: 400px;
   border: 1px solid #80808040;
+}
+.component.long {
+  max-width: 800px;
 }
 
 .standard .text-container {
@@ -47,9 +53,10 @@ p {
   transition: 0.25s;
 }
 .standard h3 {
-  font-family: "Gruppo", cursive !important;
+  font-family: "Gruppo", cursive;
   font-weight: 100;
   font-size: 1.5rem;
+  margin: 5px 0;
 }
 .standard p {
   opacity: 0.85;
@@ -61,8 +68,8 @@ p {
   flex-wrap: wrap;
 }
 .tag-container .tag {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background-size: contain;
   position: relative;
   transition: opacity 0.3s;
