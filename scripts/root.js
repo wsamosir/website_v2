@@ -104,8 +104,22 @@ function createDisplay(config) {
 
     }
 
+    if (isDefined(config.borderImage)) {
 
-    return div
+        var borderObject = ALL_BORDERS.filter(obj => {
+            return obj.id === config.borderImage
+        })[0]
+
+        div.style.border = borderObject.border
+        div.style.borderImage = borderObject.value
+    }
+
+    var divWrapper = document.createElement('div')
+    divWrapper.appendChild(div)
+
+
+
+    return divWrapper
 }
 
 PAGE_CONFIG.forEach(object => {
@@ -127,7 +141,6 @@ PAGE_CONFIG.forEach(object => {
     classNames.forEach(className => {
         div.classList.add(className)
     });
-
     div.classList.add('component')
 
     mainContainer.appendChild(div)

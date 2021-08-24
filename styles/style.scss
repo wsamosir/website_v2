@@ -43,17 +43,13 @@ p {
 
 }
 
-#main-container {
-}
-
 .component {
 
     float: left;
     width: fit-content;
     height: fit-content;
-    padding: 10px;
     max-width: 400px;
-    border: 1px solid #80808040;
+    // border: 1px solid #80808040;
     background: black;
 
     &.long {
@@ -61,8 +57,12 @@ p {
     }
 
 }
+    
 
 .standard {
+
+    padding: 10px;
+    border: 1px solid #80808040;
 
     .text-container {
         text-decoration: none;
@@ -94,6 +94,10 @@ p {
     }
 
 }
+
+
+
+
 
 .tag-container {
 

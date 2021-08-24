@@ -39,15 +39,17 @@ p {
   float: left;
   width: fit-content;
   height: fit-content;
-  padding: 10px;
   max-width: 400px;
-  border: 1px solid #80808040;
   background: black;
 }
 .component.long {
   max-width: 800px;
 }
 
+.standard {
+  padding: 10px;
+  border: 1px solid #80808040;
+}
 .standard .text-container {
   text-decoration: none;
 }

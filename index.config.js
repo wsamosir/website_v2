@@ -6,15 +6,16 @@ var PAGE_CONFIG = [
         class   : [],
         config  : {
             image       : './assets/header.png',
-            description : "Welcome and thank you for stopping by, this is where I document the things that came to be"
+            description : "Welcome and thank you for stopping by, this is where I document the things that came to be."
+        },
 
-        }
     },
 
     {
         type    : 'standard',
         class   : [],
         config  : {
+            borderImage : 'fangs',
             href        : './pages/works/midrib.html',
             image       : './assets/midrib/preview.jpg',
             title       : 'Midrib Ear Ornament',
@@ -25,6 +26,7 @@ var PAGE_CONFIG = [
                     link: 'https://www.metmuseum.org/art/collection/search/40126?searchField=All&amp;sortBy=Relevance&amp;ft=indonesian+ear+ornament&amp;offset=0&amp;rpp=20&amp;pos=3'
 
                 },
+
             ],
             tags        : [
                 'artifact',  'ear', 'java',
@@ -37,6 +39,7 @@ var PAGE_CONFIG = [
         class   : [],
         config  : {
             // href        : './works',
+            borderImage : 'cloud',
             image       : './assets/cloud_devourer/preview.jpg',
             title       : 'Cloud Devourer Ear Clip',
             description : 'A symbol of earthly revolt. Inspired by Javanese ear clip from the Eastern Javanese period',
@@ -63,7 +66,8 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            // href        : './works',
+            href        : './pages/works/protean_gauntlet.html',
+            borderImage : 'jadestone',
             image       : './assets/protean_gauntlet/preview.jpg',
             title       : 'Protean Gauntlet',
             description : 'Recreated in the name of the commons. Inspired by a glove piece from Jade Burial Suit of the Han Dynasty',
@@ -112,7 +116,7 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            // href        : './works',
+            borderImage : 'fangs',
             image       : './assets/ketopong/preview.jpg',
             title       : 'Ketopong Sultan',
             description : 'Recreated in the name of the commons. Inspired by a helmet of the Kutai Kingdom that was once believed to be only wearable by those of blue blood, smithed out of 2 kilograms of pure gold',
@@ -197,5 +201,35 @@ var ALL_TAGS = [
     },
 
 
+
+]
+
+var ALL_BORDERS  = [
+
+    {
+        id: 'fangs',
+        value: "url(assets/borders/fangs.png) 40 repeat",
+        border: '10px solid transparent'
+    },
+
+    {
+        id: 'cloud',
+        value: "url(assets/borders/cloud.png) 40 repeat",
+        border: '10px solid transparent'
+    },
+
+    {
+        id: 'jadestone',
+        value: "url(assets/borders/jadestone.png) 40 round",
+        border: '10px solid transparent'
+
+    },
+
+    {
+        id: 'spike',
+        value: "url(assets/borders/spike.png) 40 round",
+        border: '10px solid transparent'
+
+    }
 
 ]
