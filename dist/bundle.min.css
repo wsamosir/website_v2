@@ -3,6 +3,10 @@
   font-size: 15px;
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   background-color: black;
   color: white;
@@ -38,6 +42,7 @@ p {
   padding: 10px;
   max-width: 400px;
   border: 1px solid #80808040;
+  background: black;
 }
 .component.long {
   max-width: 800px;
@@ -102,10 +107,67 @@ p {
   font-weight: bold;
 }
 
+.works-images {
+  height: 90%;
+}
+.works-images img {
+  height: 100%;
+  transition: opacity 0.3s;
+  margin-right: 10px;
+}
+.works-images img.flickity-lazyloaded {
+  opacity: 1;
+}
+
+.flickity-prev-next-button {
+  top: 95%;
+  width: 24px;
+  height: 24px;
+}
+
+.flickity-button {
+  background: transparent;
+  color: white;
+}
+.flickity-button:hover {
+  background: none;
+}
+
+.bottom-arrow-container {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.bottom-arrow-container .bottom-arrow {
+  max-width: 150px;
+  width: 100%;
+}
+
+.mfp-wrap.custom-mfp-iframe .mfp-container {
+  background: transparent !important;
+}
 .mfp-wrap.custom-mfp-iframe .mfp-content {
   height: 90vh;
   max-height: 900px;
-  width: 90vw;
+  width: 95vw;
   max-width: 1800px;
-  background: black;
+  background: transparent !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #080808;
+  border-radius: 10px;
 }

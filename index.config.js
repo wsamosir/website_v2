@@ -5,7 +5,7 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            image       : './assets/others/hand_flower.jpg',
+            image       : './assets/header.png',
             description : "Welcome and thank you for stopping by, this is where I document the things that came to be"
 
         }
@@ -15,7 +15,7 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            // href        : './works',
+            href        : './pages/works/midrib.html',
             image       : './assets/midrib/preview.jpg',
             title       : 'Midrib Ear Ornament',
             description : 'Summoner of the Sun. Inspired by Javanese ear ornament from the Eastern Javanese period',

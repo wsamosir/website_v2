@@ -5,7 +5,8 @@ function createDisplay(config) {
     var div = document.createElement('div')
     div.classList.add('standard')
     var imageContainer  = document.createElement('a')
-    imageContainer.classList.add('iamge-container')
+    imageContainer.classList.add('image-container')
+    imageContainer.classList.add('iframe-popup')
     var textContainer   = document.createElement('div')
     textContainer.classList.add('text-container')
     if (isDefined(config.href)) {
@@ -50,6 +51,7 @@ function createDisplay(config) {
             // var linkButton = document.createElement('div')
             if (isDefined(link.link)) linkDiv.href = link.link
             linkDiv.classList.add('link-button')
+            linkDiv.classList.add('iframe-popup')
             linkDiv.innerHTML = link.name
             
             // linkDiv.appendChild(linkButton)
