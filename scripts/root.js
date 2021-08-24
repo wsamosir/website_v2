@@ -6,11 +6,12 @@ function createDisplay(config) {
     div.classList.add('standard')
     var imageContainer  = document.createElement('a')
     imageContainer.classList.add('image-container')
-    imageContainer.classList.add('iframe-popup')
     var textContainer   = document.createElement('div')
     textContainer.classList.add('text-container')
     if (isDefined(config.href)) {
         imageContainer.href = config.href
+        imageContainer.classList.add('iframe-popup')
+        // imageContainer.setAttribute('data-effect', "mfp-zoom-in")
     }
 
     div.appendChild(imageContainer)

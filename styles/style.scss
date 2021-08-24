@@ -34,7 +34,7 @@ p {
         width: 100%;
 
         img {
-            max-width: 600px;
+            // max-width: 500px;
             width: 100%;
             object-fit: contain
         }
@@ -43,14 +43,24 @@ p {
 
 }
 
+.background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-2;
+    opacity: 0.25;
+    filter: blur(15px);
+}
+
 .component {
 
     float: left;
     width: fit-content;
     height: fit-content;
     max-width: 400px;
-    // border: 1px solid #80808040;
-    background: black;
 
     &.long {
         max-width: 800px;
@@ -63,6 +73,8 @@ p {
 
     padding: 10px;
     border: 1px solid #80808040;
+    background: black;
+    background-clip: padding-box;
 
     .text-container {
         text-decoration: none;
@@ -247,6 +259,15 @@ p {
     }
 
 }
+
+
+.mfp-wrap .mfp-content {
+	opacity: 0;
+	transition: all .3s;
+}
+
+.mfp-wrap.mfp-ready .mfp-content    { opacity: 1; }
+.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
 
 
 /* width */

@@ -30,9 +30,20 @@ p {
   width: 100%;
 }
 .header .header-description img, .header .header-image img {
-  max-width: 600px;
   width: 100%;
   object-fit: contain;
+}
+
+.background-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: 0.25;
+  filter: blur(15px);
 }
 
 .component {
@@ -40,7 +51,6 @@ p {
   width: fit-content;
   height: fit-content;
   max-width: 400px;
-  background: black;
 }
 .component.long {
   max-width: 800px;
@@ -49,6 +59,8 @@ p {
 .standard {
   padding: 10px;
   border: 1px solid #80808040;
+  background: black;
+  background-clip: padding-box;
 }
 .standard .text-container {
   text-decoration: none;
@@ -155,6 +167,19 @@ p {
   width: 95vw;
   max-width: 1800px;
   background: transparent !important;
+}
+
+.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }
 
 /* width */

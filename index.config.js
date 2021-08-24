@@ -38,7 +38,7 @@ var PAGE_CONFIG = [
         type    : 'standard',
         class   : [],
         config  : {
-            // href        : './works',
+            href        : './pages/works/cloud_devourer.html',
             borderImage : 'cloud',
             image       : './assets/cloud_devourer/preview.jpg',
             title       : 'Cloud Devourer Ear Clip',
@@ -85,32 +85,32 @@ var PAGE_CONFIG = [
         }
     },
 
-    {
-        type    : 'standard',
-        class   : [],
-        config  : {
-            title       : 'Historical Futurism',
-            description : "Historical futurism is a movement that declares an alternative futurism, from the point of view of Indonesian and South East Asian Culture",
-            links       : [
-                {
-                    name: 'Manifesto',
-                    link: './'
-                },
+    // {
+    //     type    : 'standard',
+    //     class   : [],
+    //     config  : {
+    //         title       : 'Historical Futurism',
+    //         description : "Historical futurism is a movement that declares an alternative futurism, from the point of view of Indonesian and South East Asian Culture",
+    //         links       : [
+    //             {
+    //                 name: 'Manifesto',
+    //                 link: './'
+    //             },
     
-            ],
-            tags        : [
-                'writing'
-            ]
-        },
-    },
+    //         ],
+    //         tags        : [
+    //             'writing'
+    //         ]
+    //     },
+    // },
 
-    {
-        type    : 'standard',
-        class   : [],
-        config  : {
-            description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing, the understanding of being.",
-        },
-    },
+    // {
+    //     type    : 'standard',
+    //     class   : [],
+    //     config  : {
+    //         description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing, the understanding of being.",
+    //     },
+    // },
 
     {
         type    : 'standard',
@@ -215,7 +215,7 @@ var ALL_BORDERS  = [
     {
         id: 'cloud',
         value: "url(assets/borders/cloud.png) 40 repeat",
-        border: '10px solid transparent'
+        border: '15px solid transparent'
     },
 
     {
