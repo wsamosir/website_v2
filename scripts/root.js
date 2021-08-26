@@ -6,16 +6,18 @@ function createDisplay(config) {
     div.classList.add('standard')
     var imageContainer  = document.createElement('a')
     imageContainer.classList.add('image-container')
-    var textContainer   = document.createElement('div')
-    textContainer.classList.add('text-container')
+    var contentContainer   = document.createElement('div')
+    contentContainer.classList.add('content-container')
+
     if (isDefined(config.href)) {
         imageContainer.href = config.href
         imageContainer.classList.add('iframe-popup')
+
         // imageContainer.setAttribute('data-effect', "mfp-zoom-in")
     }
 
     div.appendChild(imageContainer)
-    div.appendChild(textContainer)
+    div.appendChild(contentContainer)
 
     if (isDefined(config.image)) {
         var img = document.createElement('img')
@@ -24,12 +26,22 @@ function createDisplay(config) {
         }
         img.src = config.image
         imageContainer.appendChild(img)
+
+        if (isDefined(config.borderImage)) {
+
+            var borderObject = ALL_BORDERS.filter(obj => {
+                return obj.id === config.borderImage
+            })[0]
+    
+            img.style.border = borderObject.border
+            img.style.borderImage = borderObject.value
+        }
     }
 
     if (isDefined(config.title)) {
         var title = document.createElement('h3')
         title.innerHTML = config.title
-        textContainer.appendChild(title)
+        contentContainer.appendChild(title)
     }
 
     if (isDefined(config.description)) {
@@ -37,7 +49,7 @@ function createDisplay(config) {
         var p = document.createElement('p')
         p.innerHTML = config.description
         pDiv.appendChild(p)
-        textContainer.appendChild(pDiv)
+        contentContainer.appendChild(pDiv)
     }
     
 
@@ -52,7 +64,17 @@ function createDisplay(config) {
             // var linkButton = document.createElement('div')
             if (isDefined(link.link)) linkDiv.href = link.link
             linkDiv.classList.add('link-button')
-            linkDiv.classList.add('iframe-popup')
+
+            if (isDefined(link.iframe)) {
+                linkDiv.classList.add('iframe-popup')
+            } else {
+                linkDiv.setAttribute('target', '_blank')
+            }
+
+            if (isDefined(link.background)) {
+                linkDiv.style.background = link.background
+            }
+
             linkDiv.innerHTML = link.name
             
             // linkDiv.appendChild(linkButton)
@@ -60,7 +82,7 @@ function createDisplay(config) {
 
         });
 
-        div.appendChild(linkContainer)
+        contentContainer.appendChild(linkContainer)
 
     }
 
@@ -100,20 +122,20 @@ function createDisplay(config) {
         });
 
 
-        div.appendChild(tagContainer)
+        contentContainer.appendChild(tagContainer)
 
 
     }
 
-    if (isDefined(config.borderImage)) {
+    // if (isDefined(config.borderImage)) {
 
-        var borderObject = ALL_BORDERS.filter(obj => {
-            return obj.id === config.borderImage
-        })[0]
+    //     var borderObject = ALL_BORDERS.filter(obj => {
+    //         return obj.id === config.borderImage
+    //     })[0]
 
-        div.style.border = borderObject.border
-        div.style.borderImage = borderObject.value
-    }
+    //     div.style.border = borderObject.border
+    //     div.style.borderImage = borderObject.value
+    // }
 
     var divWrapper = document.createElement('div')
     divWrapper.appendChild(div)
@@ -148,6 +170,22 @@ PAGE_CONFIG.forEach(object => {
 
 });
 
+var navigationContainer = document.querySelector('.navigation-container')
+var openButton = navigation.querySelector('.open-button')
+var overlay = document.querySelector('.overlay')
 
+openButton.addEventListener('click', function(e) {
 
+    navigationContainer.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle('noscroll')
 
+})
+
+overlay.addEventListener('click', function(e) {
+
+    navigationContainer.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle('noscroll')
+
+})

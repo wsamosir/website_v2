@@ -16,26 +16,43 @@
     </head>
     <body>
 
-        <video class="background-video" autoplay muted loop id="myVideo" 
+        <!-- <video class="background-video" autoplay muted loop id="myVideo" 
         >
             <source src="./assets/bgvid.mp4" type="video/mp4">
-          </video>
+          </video> -->
 
-        <!-- <header class="header">
-            <div class="header-image">
-                <img src="assets/header.png">
-            </div>
-        </header> -->
+        <div class="overlay"></div>
 
         <div    id="main-container"
                 class="grid">
         </div>
 
+        <div class="navigation-container">
+            <div id="navigation">
+                <button class="open-button">
+                    <img src="assets/menu.png">
+                </button>
+    
+                <a class="menu-item" style="background:#2e5d70"
+                href="https://github.com/wsamosir/wsamosir.github.io" target="_blank">
+                    Github
+                </a>
+
+                <a class="menu-item" style="background:#883b38" href="https://www.instagram.com/williamb.js/" target="_blank">
+                    Instagram
+                </a>
+
+            </div>
+        </div>
+
+
         <script src="./dist/bundle.js"></script>
 
         <script>
             var msnry = new Masonry( '.grid', {
-                gutter: 5
+                gutter: 5,
+                fitWidth: true,
+                columnWidth: 175,
             })
         </script>
 
@@ -51,13 +68,13 @@
                 },
                 callbacks: {
 
-                    open: function() {                        // When you open the
-                        $('body').css('overflow', 'hidden');  // window, the element
-                    },                                        // "body" is used "overflow: hidden".
+                    open: function() {
+                        $('body').css('overflow', 'hidden');
+                    },                                        
 
-                    close: function() {                       // When the window
-                        $('body').css('overflow', '');        // is closed, the 
-                    },                                        // "overflow" gets the initial value.
+                    close: function() {                       
+                        $('body').css('overflow', '');        
+                    },                                        
 
                 }   
 

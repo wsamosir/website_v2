@@ -6,8 +6,10 @@ var PAGE_CONFIG = [
         class   : [],
         config  : {
             image       : './assets/header.png',
-            description : "Welcome and thank you for stopping by, this is where I document the things that came to be."
+            description : "Welcome and thank you for stopping by, this is where I document the things that came to be.",
         },
+
+
 
     },
 
@@ -25,6 +27,9 @@ var PAGE_CONFIG = [
                     name: 'Original Artifact',
                     link: 'https://www.metmuseum.org/art/collection/search/40126?searchField=All&amp;sortBy=Relevance&amp;ft=indonesian+ear+ornament&amp;offset=0&amp;rpp=20&amp;pos=3'
 
+                },
+                {
+                    name: 'Object',
                 },
 
             ],
@@ -61,6 +66,33 @@ var PAGE_CONFIG = [
             ],
         }
     },
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            href: './assets/others/amethyst_tube_2.jpg',
+            image       : './assets/others/amethyst_tube_2.jpg',
+        },
+    },
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            image       : './assets/others/lion_serpent.jpg',
+        },
+    },
+
+    {
+        type    : 'standard',
+        class   : [],
+        config  : {
+            image       : './assets/others/ba_amulet.jpg',
+        },
+    },
+
+
 
     {
         type    : 'standard',
@@ -104,19 +136,57 @@ var PAGE_CONFIG = [
     //     },
     // },
 
-    // {
-    //     type    : 'standard',
-    //     class   : [],
-    //     config  : {
-    //         description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing, the understanding of being.",
-    //     },
-    // },
 
     {
         type    : 'standard',
         class   : [],
         config  : {
-            borderImage : 'fangs',
+            image       : './assets/others/hand_flower.jpg',
+            // description : "From things in this world, comes interpretation. From interpretation comes form, and of course form breeds meaning. But always before meaning, comes sensing. Sensing how another person would go about doing their things, sensing the smell of the air as it was 5000 years ago, sensing the remembrance of what is to come and therefore manifesting a future.",
+        },
+    },
+
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            image       : './assets/others/screw.jpg',
+        },
+    },
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            image       : './assets/others/screw2.jpg',
+        },
+    },
+
+
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            image       : './assets/others/coin.jpg',
+        },
+    },
+
+    {
+        type    : 'standard',
+        class   : ['short'],
+        config  : {
+            image       : './assets/others/wax.jpg',
+        },
+    },
+
+
+
+    {
+        type    : 'standard',
+        class   : [],
+        config  : {
             image       : './assets/ketopong/preview.jpg',
             title       : 'Ketopong Sultan',
             description : 'Recreated in the name of the commons. Inspired by a helmet of the Kutai Kingdom that was once believed to be only wearable by those of blue blood, smithed out of 2 kilograms of pure gold',
@@ -133,6 +203,8 @@ var PAGE_CONFIG = [
             ]
         }
     },
+
+
 
 
 ]
